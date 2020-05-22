@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste produits
+{% endblock %}
+
+{% block body %}
+	<!-- LE COMPOSANT NAVBAR-->
+	{{include("navbar.html.twig")}}
+	<!-- FIN DU COMPOSANT NAVBAR-->
+
+	<!--LE COMPOSANT TITRE -->
+	{{include("titre.html.twig")}}
+	<!--FIN DU COMPOSANT TITRE -->
+
+		<div class="grid-x"> <div class="cell">
+			<div class="grid-container">
+
+				<p>
+					<a href="{{path("produit_ajouter")}}" class="button primary tiny">Ajouter produit</a>
+				</p>
+
+				<div class="tabEnseigne">
+					{% for produit in produits | sort  %}
+						<table>
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Nom</th>
+									<th>Image</th>
+									<th>CPU</th>
+									<th>RAM</th>
+									<th>VGA</th>
+									<th>Ecran</th>
+									<th>Stockage</th>
+									<th>Prix</th>
+									<th colspan="2">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr></tr>
+								<td>
+									{{ produit.id}}</td>
+								<td>
+									{{ produit.nom }}</td>
+								<td></td>
+								<td>{{ produit.image }}</td>
+								<td>{{ produit.cpu }}</td>
+								<td>{{ produit.ram }}</td>
+								<td>{{ produit.vga }}</td>
+								<td>{{ produit.ecran }}</td>
+								<td>{{ produit.stockage }}</td>
+								<td>{{ produit.prix }}</td>
+								<td>
+									<button class="button warning tiny">
+										<a href="{{path('produit_modifier',{id:produit.id })}}">Modifications</a>
+									</button>
+								</td>
+								<td>
+									<button class="button alert tiny">
+
+										<a href="{{path('produit_supprimer',{id:produit.id })}}">Suppressions</a>
+
+									</button>
+								</td>
+
+
+							</tbody>
+						</td>
+					</tbody>
+				</table>
+
+			{% else %}
+				Aucun produit trouvé.
+			{% endfor %}
+			<br>
+			{# display navigation #}
+			<div class="navigation">
+				<span class="text-center">{{ knp_pagination_render(produits) }}</span>
+			</div>
+		</div>
+	</div>
+</div></div>{% endblock %}

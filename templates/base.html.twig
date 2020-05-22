@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html class="no-js" lang="fr">
+	<head>
+
+		<meta charset="utf-8"/>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+		<!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/ec63adeb54.js" crossorigin="anonymous"></script>
+	
+			<link rel="stylesheet" href="{{ asset('assets/css/app.css')}}">
+				<link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+		{% block javascripts %}
+
+			<script src="{{asset('assets/js/jquery.js')}}"></script>
+			<script src="js/vendor/what-input.js"></script>
+			<script src="{{asset('assets/js/app.js')}}"></script>
+			<script>
+				$(document).foundation();
+			</script>
+		{% endblock %}
+	</body>
 </html>

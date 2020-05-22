@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline|Nunito+Sans|Lobster|Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap");
+​
+body {
+    padding: .5rem;
+    line-height: 1.7;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: .8rem;
+    color: #555;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+}
+​
+.titrePage {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #e0f2f1;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+    word-spacing: 3px;
+}
+​
+.titrePage::before {
+    content: '';
+    display: block;
+    height: 65%;
+    width: 58%;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+    opacity: .8;
+    z-index: -1;
+    transform: skewY(0deg) translate(-50%, -50%);
+}
+​
+/*=======================TAB ENSEIGNE======================*/
+.tabEnseigne {
+    margin-right: auto;
+    margin-left: auto;
+    width: 58%;
+}
+​
+.thead {
+    font-family: 'Merriweather', serif;
+    background: #4ca2cd;
+    color: white;
+    font-size: 1.2em;
+}
+​
+.thead th {
+    text-align: center;
+    text-transform: uppercase;
+}
+​
+.tbody {
+    font-size: .9em;
+}
+​
+.tbody td {
+    font-size: .9em;
+}
+​
+.formLogin {
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+}
+​
+.formEnseigne {
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+}
+​
+.formProduit {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+​
+.actionSupprimer{
+    text-align: center;
+    color: #d50000;
+    font-weight: 400;
+}
+​
+.actionModifier{
+    text-align: center;
+    color: #d84315;
+    font-weight: 400;
+}
+​
+/*=========================================================================*/
+.produit_image {
+    position: relative;
+}
+​
+.produit_image::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right bottom, #67b26f, #4ca2cd);
+    opacity: .3;
+}
+​
+.produit_enseigne {
+    background: linear-gradient(to right, #67b26f, #4ca2cd);
+    font-size: .8rem;
+}
+​
+.produit_nom {
+    background: linear-gradient(to right, #67b26f, #4ca2cd);
+    font-size: .8rem;
+} 
+.produit_caracteristique {
+    font-size: .9rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+​
+.emoji-left {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+​
+.emoji-right {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+​
+.produit_prix {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+    color: #0c3d5d;
+}
+​
+.produit_prix:hover {
+    background-color: #67b26f;
+}
+​
+.produit_detail_lien {
+    border-top: 1px solid #e1e1e1;
+    background-color: #5aaa9d;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+​
+.produit_detail_lien:link,
+.produit_detail_lien:visited {
+    border-top: 1px solid #e1e1e1;
+    background-color: #5aaa9d;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+​
+.produit_detail_lien:hover,
+.produit_detail_lien:active {
+    background-color: #67b26f;
+}
+​
+.produit {
+    width: 35rem;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+​
+.produit_price {
+    position: absolute;
+    top: -2rem;
+    right: -3rem;
+    z-index: 100;
+    background: linear-gradient(to right bottom, #67b26f, #4ca2cd);
+    height: 7rem;
+    width: 7rem;
+    border: 6px solid white;
+    border-radius: 50%;
+    transform: rotate(15deg);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Bungee Inline", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+​
+.produit_back:link,
+.produit_back:visited {
+    position: absolute;
+    top: -1.5rem;
+    left: -3rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+    border: 1px solid white;
+    border-radius: 50rem;
+    padding: 0 1rem;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+}
+​
+.produit_back:hover,
+.produit_back:active {
+    background-color: #4ca2cd;
+    color: #555;
+}
+​
+.produit_hero {
+    position: relative;
+}
+​
+.produit_hero::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right bottom, #67b26f, #4ca2cd);
+    opacity: .4;
+}
+​
+.produit_name {
+    background: linear-gradient(to right, #67b26f, #4ca2cd);
+    padding: 1.3rem 1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    word-spacing: 2px;
+}
+​
+.produit_details {
+    background-color: #eee;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+​
+.produit_description {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    text-align: justify;
+    font-family: 'Croissant One', cursive;
+    color: #0c3d5d;
+}
+​
+.produit_link:link,
+.produit_link:visited {
+    /*display: block;*/
+    background-color: #5aaa9d;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+​
+.produit_link:hover,
+.produit_link:active {
+    background-color: #67b26f;
+}
+​
+.produit_source {
+    padding: 1rem;
+    color: #999;
+    font-size: .6rem;
+    text-align: center;
+}
+​
+.produit_source a:link,
+.produit_source a:visited {
+    color: #999;
+}
+​
+.produit_source a:hover,
+.produit_source a:active {
+    color: #555;
+}
+​
+/*=================SURCHARGE DE FOUNDATION==================*/
+::-webkit-input-placeholder {
+    color: #4ca2cd;
+}
+​
+:-ms-input-placeholder {
+    color: #4ca2cd;
+}
+​
+::-ms-input-placeholder {
+    color: #4ca2cd;
+}
+​
+::placeholder {
+    color: #4ca2cd;
+}
+​
+.callout.alert {
+    background-color: #ffcdd2;
+    color: #0a0a0a;
+}
+​
+.button.secondary, .button.secondary.disabled, .button.secondary[disabled], .button.secondary.disabled:hover, .button.secondary[disabled]:hover, .button.secondary.disabled:focus, .button.secondary[disabled]:focus {
+    background-color: #00838f;
+    color: #fefefe;
+}
+​
+.button.secondary:hover, .button.secondary:focus {
+    background-color: #00bcd4;
+    color: #fefefe;
+}
+
+/*======================================TAB Enseigne=============================================*/
+.tabEnseigne {
+    margin-right:auto;
+    margin-left:auto;
+    width:58%;
+}
+
+.tabPanier {
+    width:400px;
+    margin-bottom:0;
+}
+
+.tabPanier thead {
+    background-color:#0c3d5d;
+    color:white;
+}
+
+.panierActionSupprimer {
+    text-align: center;
+    color: #d50000;
+    font-weight: 400;
+}
+
+.panierVide {
+    color: #c62828;
+}

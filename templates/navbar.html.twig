@@ -1,0 +1,138 @@
+<!-- LE COMPOSANT NAVBAR-->
+<div class="grid-x">
+	<div class="cell">
+		<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+			<button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+			<div class="title-bar-title">Menu</div>
+		</div>
+		<div class="top-bar" id="responsive-menu">
+			<div class="top-bar-left">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li class="menu-text">J4L-TECHNOLOGIES</li>
+					<li>
+						<a href="{{path('store_accueil')}}">Accueil</a>
+					</li>
+					 {% if is_granted("ROLE_ADMIN") %}
+					<li class="has-submenu">
+						<a href="{{path('enseigne_liste')}}">Enseigne</a>
+						<ul class="submenu menu vertical" data-submenu>
+							<li>
+								<a href="{{path('enseigne_liste')}}">Liste</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="{{path('produit_liste')}}">Produit</a>
+						<ul class="submenu menu vertical" data-submenu>
+							<li>
+								<a href="{{path('produit_liste')}}">Liste</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">User</a>
+						<ul class="submenu menu vertical" data-submenu>
+							<li>
+								<a href="#">Liste</a>
+							</li>
+						</ul>
+					</li>
+						{% endif %}
+				</ul>
+			</div>
+
+			<div class="top-bar-right">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li class="has-submenu">
+						<a href="#" style="margin-right: 7rem">🛒 Panier</a>
+						<ul class="submenu menu vertical" data-submenu>
+							<table class="tabPanier hover">
+								<thead>
+									<tr>
+										<th>Produit</th>
+										<th>Quantité</th>
+										<th>Sous total</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for lc in lignesCmds %}
+										<tr>
+											<td>{{ lc.ligne_cmd }}</td>
+											<td class="align-center">{{ lc.ligne_cmd.quantite }}</td>
+											<td class="align-right">
+												<strong>{{ lc.ligne_cmd.sousTotal }}</strong>
+											</td>
+											<td>
+												<button>
+                                                    <a href="{{path('panier_supprimer',{id: lc.ligne_cmd.produit.id })}}" class="panierActionSupprimer">
+                                                </button>
+													<strong>
+														<i class="fas fa-trash-alt fa-lg">⛽</i>
+													</strong>
+												</a>
+											</td>
+										</tr>
+									{% else %}
+										<tr>
+											<td colspan="4">Le panier est vide</td>
+										</tr>
+									{% endfor %}
+									{% if total > 0 %}
+										<tr class="total">
+											<td colspan="2" class="text-right">
+												<strong>TOTAL</strong>
+											</td>
+											<td class="text-right primary">
+												<strong>{{ total }}</strong>
+											</td>
+											<td class="text-right primary"></td>
+										</tr>
+									{% endif %}
+								</tbody>
+							</table>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="top-bar-right">
+				<ul class="dropdown menu" data-dropdown-menu>
+
+                    {% if is_granted("ROLE_USER") %}
+
+					<li class="has-submenu">
+						<a href="{{path('app_mon_compte')}}" style="margin-right: 7rem">👨‍💻 Profile</a>
+					</li>
+
+			<ul class="submenu menu vertical" data-submenu>
+					
+					<li>
+						<a href="{{path('app_logout')}}" style="margin-right: 7rem">Logout</a>
+					</li>
+					
+				     {% else %}
+
+					<li>
+						<a href="{{path('app_login')}}" style="margin-right: 7rem">👨‍💻 Login</a>
+					</li>
+
+                     {% endif %}
+
+			</ul>
+					<div class="top-bar-right">
+							<ul class="menu">
+								<li>
+							<input type="search" placeholder="Search"/>
+								</li>
+							<button type="button" class="button">Search</button>
+							</ul>
+					</div>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIN DU COMPOSANT NAVBAR-->

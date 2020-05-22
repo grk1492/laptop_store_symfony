@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": true,
+            "database": "laptop_db",
+            "dialect": "MySQL",
+            "name": "grk",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}

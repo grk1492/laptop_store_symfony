@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <!-- Font Awesome CSS -->
+    <script
+      src="https://kit.fontawesome.com/ec63adeb54.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Foundation Compressed CSS -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- LE COMPOSANT NAVBAR-->
+    <div class="grid-x">
+      <div class="cell">
+        <div
+          class="title-bar"
+          data-responsive-toggle="responsive-menu"
+          data-hide-for="medium"
+        >
+          <button
+            class="menu-icon"
+            type="button"
+            data-toggle="responsive-menu"
+          ></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="responsive-menu">
+          <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li class="menu-text">J4L-TECHNOLOGIES</li>
+              <li><a href="#">Accueil</a></li>
+              <li class="has-submenu">
+                <a href="#">Enseigne</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <li><a href="#">Liste</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a href="#">Produit</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <li><a href="#">Liste</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a href="#">User</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <li><a href="#">Liste</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li class="has-submenu">
+                <a href="#" style="margin-right: 7rem">🛒 Panier</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <table class="tabPanier hover">
+                    <thead>
+                      <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Sous total</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Produit 1</td>
+                        <td class="align-center">2</td>
+                        <td class="align-right">
+                          <strong>1000$</strong>
+                        </td>
+                        <td>
+                          <a href="#" class="panierActionSupprimer">
+                            <strong>
+                              <i class="fas fa-trash-alt fa-lg"></i>
+                            </strong>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="total">
+                        <td colspan="2" class="text-right">
+                          <strong>TOTAL</strong>
+                        </td>
+                        <td class="text-right primary">
+                          <strong>1000$</strong>
+                        </td>
+                        <td class="text-right primary"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li>
+                <a href="#" style="margin-right: 7rem">👨‍💻 logout</a>
+              </li>
+              <li>
+                <a href="#" style="margin-right: 7rem">👨‍💻 Login</a>
+              </li>
+
+              <li>
+                <input type="search" placeholder="Search" />
+              </li>
+              <li>
+                <button type="button" class="button">Search</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN DU COMPOSANT NAVBAR-->
+    <hr />
+    <!--LE COMPOSANT TITRE -->
+    <div class="grid-x">
+      <div class="cell text-center">
+        <h1 class="titrePage">TITRE DE LA PAGE</h1>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT TITRE -->
+    <hr />
+    <!--LE COMPOSANT FORMULAIRE ENSEIGNE-->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="formEnseigne">
+          <form>
+            <div class="grid-container">
+              <fieldset class="fieldset">
+                <legend>Form Enseigne</legend>
+                <label>
+                  Nom de l'enseigne
+                  <input
+                    type="text"
+                    id="middle-label"
+                    placeholder="Saisir le nom de l'enseigne"
+                  />
+                </label>
+                <div>
+                  <button class="button primary tiny">Valider</button>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT FORMULAIRE ENSEIGNE-->
+    <hr />
+    <!--LE COMPOSANT FORMULAIRE -->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="formProduit">
+          <form>
+            <div class="grid-container">
+              <fieldset class="fieldset">
+                <legend>Form Produit</legend>
+                <div class="grid-x grid-padding-x">
+                  <div class="medium-6 cell">
+                    <label for="exampleFileUpload" class="button">
+                      Telecharger l'image
+                    </label>
+                    <input
+                      type="file"
+                      id="exampleFileUpload"
+                      class="show-for-sr"
+                    />
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="cell">
+                    <label class="text-capitalize">
+                      Enseigne
+                      <select>
+                        <option value="husker">Husker</option>
+                        <option value="starbuck">Starbuck</option>
+                        <option value="hotdog">Hot Dog</option>
+                        <option value="apollo">Apollo</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="medium-3 cell">
+                    <label class="text-capitalize">
+                      Nom du produit
+                      <input type="text" placeholder="Nom du produit" />
+                    </label>
+                  </div>
+                  <div class="medium-3 cell">
+                    <label class="text-capitalize">
+                      Cpu
+                      <input type="text" placeholder="CPUt" />
+                    </label>
+                  </div>
+                  <div class="medium-3 cell">
+                    <label class="text-capitalize">
+                      ram
+                      <input type="text" placeholder="RAM" />
+                    </label>
+                  </div>
+                  <div class="medium-3 cell">
+                    <label class="text-capitalize">
+                      stockage
+                      <input type="text" placeholder="stockage" />
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="medium-4 cell">
+                    <label class="text-capitalize">
+                      ecran
+                      <input type="text" placeholder="stockage" />
+                    </label>
+                  </div>
+                  <div class="medium-4 cell">
+                    <label class="text-capitalize">
+                      vga
+                      <input type="text" placeholder="VGA" />
+                    </label>
+                  </div>
+                  <div class="medium-4 cell">
+                    <label class="text-capitalize">
+                      prix
+                      <input type="text" placeholder="Prix" />
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="cell">
+                    <label class="text-capitalize">
+                      Description
+                      <textarea placeholder="Description du produit"></textarea>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="grid-x grid-padding-x">
+                  <div class="cell">
+                    <button type="submit" class="button tiny">Valider</button>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT FORMULAIRE -->
+    <hr />
+    <!--LE COMPOSANT TABLEAU ENSEIGNE -->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="grid-container">
+          <div class="tabEnseigne">
+            <table>
+              <thead class="thead">
+                <tr>
+                  <th>id</th>
+                  <th>nom de l'enseigne</th>
+                  <th colspan="2">actions</th>
+                </tr>
+              </thead>
+              <tbody class="tbody">
+                <tr>
+                  <td>1</td>
+                  <td>XPS 13</td>
+                  <td class="tdBtnModifier">
+                    <a class="button secondary tiny" href="#">Modifier</a>
+                  </td>
+                  <td>
+                    <form action="#" method="post">
+                      <input type="hidden" name="_method" value="DELETE" />
+                      <input
+                        type="hidden"
+                        name="_token"
+                        value="{{ csrf_token('delete' ~ produit.id) }}"
+                      />
+                      <button class="alert button tiny" type="submit">
+                        Supprimer
+                      </button>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT TABLEAU ENSEIGNE -->
+    <hr />
+    <!--LE COMPOSANT TABLEAU PRODUIT-->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="tabEnseigne">
+          <table>
+            <thead class="thead">
+              <tr>
+                <th class="th">Id</th>
+                <th class="th">Enseigne</th>
+                <th class="th">Nom</th>
+                <th class="th">Cpu</th>
+                <th class="th">Ram</th>
+                <th class="th">Stockage</th>
+                <th class="th">prix</th>
+                <th class="th" colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr>
+                <td>1</td>
+                <td>DELL</td>
+                <td>XPS13</td>
+                <td>Intel Core i3 - i7</td>
+                <td>4 Go - 16 Go</td>
+                <td>SSD 128 Go - 2 To</td>
+                <td>1099.01 €</td>
+                <td class="tdBtnModifier">
+                  <a class="button secondary tiny" href="#">Modifier</a>
+                </td>
+                <td class="tdBtn">
+                  <form action="#" method="post">
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <input
+                      type="hidden"
+                      name="_token"
+                      value="{{ csrf_token('delete' ~ produit.id) }}"
+                    />
+                    <button class="alert button tiny" type="submit">
+                      Supprimer
+                    </button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT TABLEAU ENSEIGNE -->
+    <hr />
+    <!--LE COMPOSANT ARTICLES -->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x small-up-2 medium-up-4">
+            <div class="cell">
+              <figure class="card">
+                <div class="card-divider produit_enseigne">
+                  <h4>Enseigne</h4>
+                </div>
+                <div class="produit_image">
+                  <img src="assets/img/laptop.png" alt="" />
+                </div>
+                <div class="card-divider produit_nom">
+                  <h4>Nom du produit</h4>
+                </div>
+                <div class="card-section">
+                  <div class="grid-x">
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid-x grid-margin-x align-middle">
+                    <div class="cell small-6 produit_prix">
+                      <a href="#">
+                        Prix €
+                        <span class="emoji-right">🛒</span>
+                      </a>
+                    </div>
+                    <a href="#" class="cell auto produit_detail_lien">
+                      detail
+                      <span class="emoji-right">👉</span>
+                    </a>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="cell">
+              <figure class="card">
+                <div class="card-divider produit_enseigne">
+                  <h4>Enseigne</h4>
+                </div>
+                <div class="produit_image">
+                  <img src="assets/img/laptop.png" alt="" />
+                </div>
+                <div class="card-divider produit_nom">
+                  <h4>Nom du produit</h4>
+                </div>
+                <div class="card-section">
+                  <div class="grid-x">
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid-x grid-margin-x align-middle">
+                    <div class="cell small-6 produit_prix">
+                      <a href="#">
+                        Prix €
+                        <span class="emoji-right">🛒</span>
+                      </a>
+                    </div>
+                    <a href="#" class="cell auto produit_detail_lien">
+                      detail
+                      <span class="emoji-right">👉</span>
+                    </a>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="cell">
+              <figure class="card">
+                <div class="card-divider produit_enseigne">
+                  <h4>Enseigne</h4>
+                </div>
+                <div class="produit_image">
+                  <img src="assets/img/laptop.png" alt="" />
+                </div>
+                <div class="card-divider produit_nom">
+                  <h4>Nom du produit</h4>
+                </div>
+                <div class="card-section">
+                  <div class="grid-x">
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid-x grid-margin-x align-middle">
+                    <div class="cell small-6 produit_prix">
+                      <a href="#">
+                        Prix €
+                        <span class="emoji-right">🛒</span>
+                      </a>
+                    </div>
+                    <a href="#" class="cell auto produit_detail_lien">
+                      detail
+                      <span class="emoji-right">👉</span>
+                    </a>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="cell">
+              <figure class="card">
+                <div class="card-divider produit_enseigne">
+                  <h4>Enseigne</h4>
+                </div>
+                <div class="produit_image">
+                  <img src="assets/img/laptop.png" alt="" />
+                </div>
+                <div class="card-divider produit_nom">
+                  <h4>Nom du produit</h4>
+                </div>
+                <div class="card-section">
+                  <div class="grid-x">
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                    <div class="cell small-6">
+                      <div>
+                        <span class="emoji-left">🧮</span>
+                        CPU
+                      </div>
+                      <div>
+                        <span class="emoji-left">💽</span>
+                        RAM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid-x grid-margin-x align-middle">
+                    <div class="cell small-6 produit_prix">
+                      <a href="#">
+                        Prix €
+                        <span class="emoji-right">🛒</span>
+                      </a>
+                    </div>
+                    <a href="#" class="cell auto produit_detail_lien">
+                      detail
+                      <span class="emoji-right">👉</span>
+                    </a>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN COMPOSANT ARTICLES -->
+    <hr />
+    <!--LE COMPOSANT DETAIL ARTICLE -->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="grid-container">
+          <!--                <div class="grid-x grid-margin-x small-up-2">-->
+          <div class="cell">
+            <figure class="produit">
+              <p class="produit_price">1099.31</p>
+              <a href="#" class="produit_back">
+                <span class="emoji-left">👈</span>
+                Retour
+              </a>
+              <div class="produit_hero">
+                <img
+                  src="assets/img/laptop.png"
+                  alt="ord"
+                  class="produit_img"
+                />
+              </div>
+              <h4 class="produit_name">XPS 13</h4>
+              <div class="produit_details">
+                <div>
+                  <span class="emoji-left">📦</span>
+                  RAM
+                </div>
+                <div>
+                  <span class="emoji-left">💾</span>
+                  Stockage
+                </div>
+                <div>
+                  <span class="emoji-left">🖥</span>
+                  VGA
+                </div>
+                <div>
+                  <span class="emoji-left">🧮</span>
+                  CPU
+                </div>
+                <div>
+                  <span class="emoji-left">💻</span>
+                  ECRAN
+                </div>
+              </div>
+              <p class="produit_description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores consequatur cum debitis delectus, doloribus ipsum
+                magnam minima pariatur quasi quod quos, totam vel vitae. Ad
+                alias amet animi atque corporis culpa cumque deleniti distinctio
+                eveniet explicabo incidunt ipsum, laborum libero magni maiores
+                minima modi molestiae mollitia neque nobis non officiis, optio
+                perspiciatis, porro provident quod recusandae repellendus sunt
+                tenetur voluptatem! Aperiam autem distinctio enim ex fugit
+                incidunt, iure iusto libero necessitatibus nesciunt officiis
+                quibusdam, quisquam reiciendis sint sit ut voluptate
+                voluptatibus. Ab aspernatur blanditiis id ipsam minima optio
+                perspiciatis placeat quo sapiente voluptates. Culpa fugit ipsum
+                laudantium non nostrum quas!
+              </p>
+              <p class="produit_source">
+                Source:
+                <a
+                  href="https://www.techradar.com/news/mobile-computing/articles/best-articles-1304361"
+                  target="_blank"
+                >
+                  https://www.techradar.com/news/mobile-computing/articles/best-articles-1304361
+                </a>
+              </p>
+              <!--                    <a href="#" class="produit_link">Ajoutez au panier<span class="emoji-right">🛒 😍</span></a>-->
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN DU COMPOSANT DETAIL ARTICLE -->
+    <br />
+    <hr />
+    <!--LE COMPOSANT LOGIN -->
+    <div class="grid-x">
+      <div class="cell">
+        <div class="formEnseigne">
+          <div class="grid-container">
+            <form method="post">
+              <div class="callout alert">
+                <span>Gestion des erreurs</span>
+              </div>
+              <div data-alert class="alert-box alert-error"></div>
+              <fieldset class="fieldset">
+                <legend>Entrez vos infos de connexion puis validez</legend>
+                <div class="cell">
+                  <label>
+                    Email
+                    <input
+                      type="email"
+                      name="email"
+                      value=""
+                      id="inputEmail"
+                      placeholder="Entrez votre email"
+                      required
+                      autofocus
+                    />
+                  </label>
+                </div>
+                <div class="cell">
+                  <label>
+                    Mot de passe
+                    <input
+                      type="password"
+                      name="password"
+                      id="inputPassword"
+                      placeholder="Entrez votre mdp"
+                      required
+                    />
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="hidden"
+                    name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                  />
+                </div>
+                <div class="cell-2">
+                  <button type="submit" class="button">Valider</button>
+                </div>
+                <div class="cell">
+                  <input id="checkbox" type="checkbox" name="_remember_me" />
+                  <label for="checkbox">Remember me</label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN COMPOSANT LOGIN -->
+
+    <!-- JQuery Compressed JavaScript -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- Foundation what-input Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/6.2.2/js/vendor/what-input.js"></script>
+    <!-- Foundation Compressed JavaScript -->
+    <script src="assets/js/app.js"></script>
+    <script>
+      $(document).foundation()
+    </script>
+  </body>
+</html>

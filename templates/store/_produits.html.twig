@@ -1,0 +1,54 @@
+<!--LE COMPOSANT ARTICLES -->
+<div class="grid-x">
+    <div class="cell">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x small-up-2 medium-up-4">
+						{% for produit in produits %}
+                <div class="cell">
+							
+                    <figure class="card">
+                        <div class="card-divider produit_enseigne">
+                            <h4>{{produit.enseigne.nom}}</h4>
+                        </div>
+                        <div class="produit_image">
+                            <img src="{{asset('assets/img/produits')}} {{produit.image}}" alt="{{produit.image}}">
+                        </div>
+                        <div class="card-divider produit_nom">
+                            <h4>: {{produit.nom}}</h4>
+                        </div>
+                        <div class="card-section">
+                            <div class="grid-x">
+                                <div class="cell small-6">
+                                    <div>
+                                        <span class="emoji-left">🧮</span>CPU : {{produit.cpu}}
+                                    </div>
+                                    <div>
+                                        <span class="emoji-left">💽</span>RAM : {{produit.ram}}
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-x grid-margin-x align-middle">
+                                <div class="cell small-6 produit_prix">
+                                    <a href="{{path('panier_ajouter', {id: produit.id})}}">{{produit.prix}} €<span class="emoji-right">🛒</span></a>
+                                </div>
+                                <a href="#" class="cell auto produit_detail_lien"><span
+                                        class="emoji-right">{{ produit.description }} 👉</span></a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+						{% endfor %}
+                
+               
+            </div>
+        </div>
+    </div>
+<!--FIN COMPOSANT ARTICLES -->
+              {# display navigation #}
+			<div class="navigation">
+				<span class="text-center">{{ knp_pagination_render(produits) }}</span>
+			</div>
+</div>

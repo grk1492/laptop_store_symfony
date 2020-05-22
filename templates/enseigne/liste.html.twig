@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste enseignes
+{% endblock %}
+
+{% block body %}
+	<!-- LE COMPOSANT NAVBAR-->
+		{{include("navbar.html.twig")}}
+	<!-- FIN DU COMPOSANT NAVBAR-->
+
+	<!--LE COMPOSANT TITRE -->
+		{{include("titre.html.twig")}}
+	<!--FIN DU COMPOSANT TITRE -->
+
+	<div class="grid-x">
+		<div class="cell">
+			<div class="grid-container">
+
+				<p>
+					<a href="{{path("enseigne_ajouter")}}" class="button primary tiny">Ajouter enseigne</a>
+				</p>
+
+				<div class="tabEnseigne">
+					{% for enseigne in enseignes | sort  %}
+						<table>
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Nom</th>
+									<th colspan="2">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr></tr>
+								<td>
+									{{ enseigne.id}}</td>
+								<td>
+									{{ enseigne.nom }}</td>
+								<td>
+							 
+									<button class="button warning tiny">
+										<a href="{{path('enseigne_modifier',{id:enseigne.id })}}">Modifications</a>
+
+									</button>
+								</td>
+								<td>
+									<button class="button alert tiny">
+
+										<a href="{{path('enseigne_supprimer',{id:enseigne.id })}}">Suppressions</a>
+
+									</button>
+								</td>
+							</tbody>
+						</table>
+
+					{% else %}
+						Aucune enseignes trouvé.
+					{% endfor %}
+					<br>
+					{# display navigation #}
+					<div class="navigation">
+						<span class="text-center">{{ knp_pagination_render(enseignes) }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

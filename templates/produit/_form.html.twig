@@ -1,0 +1,82 @@
+<!--LE COMPOSANT FORMULAIRE -->
+<div class="grid-x">
+	<div class="cell">
+		<div class="formProduit">
+			{{ form_start(form) }}
+			<div class="grid-container">
+				<fieldset class="fieldset">
+					<legend>Form Produit</legend>
+					<div class="grid-x grid-padding-x">
+						<div class="medium-6 cell">
+							<label for="exampleFileUpload" class="button">
+                            
+						{{ form_row(form.imageFile) }}
+                            </label>
+						</div>
+					</div>
+					<div class="grid-x grid-padding-x">
+						<div class="cell">
+							<label class="text-capitalize">
+								{{ form_row(form.enseigne) }}
+							</label>
+						</div>
+					</div>
+					<div class="grid-x grid-padding-x">
+						<div class="medium-3 cell">
+							<label class="text-capitalize">
+							{{ form_row(form.nom) }}
+							</label>
+						</div>
+						<div class="medium-3 cell">
+							<label class="text-capitalize">
+								{{ form_row(form.cpu) }}
+							</label>
+						</div>
+						<div class="medium-3 cell">
+							<label class="text-capitalize">
+							{{ form_row(form.ram) }}
+							</label>
+						</div>
+						<div class="medium-3 cell">
+							<label class="text-capitalize">
+							{{ form_row(form.stockage) }}
+							</label>
+						</div>
+					</div>
+					<div class="grid-x grid-padding-x">
+						<div class="medium-4 cell">
+							<label class="text-capitalize">
+							{{ form_row(form.ecran) }}
+							</label>
+						</div>
+						<div class="medium-4 cell">
+							<label class="text-capitalize">
+								{{ form_row(form.vga) }}
+							</label>
+						</div>
+						<div class="medium-4 cell">
+							<label class="text-capitalize">
+							{{ form_row(form.prix) }}
+							</label>
+						</div>
+					</div>
+					<div class="grid-x grid-padding-x">
+						<div class="cell">
+							<label class="text-capitalize">
+							{{ form_row(form.description) }}
+							</label>
+						</div>
+					</div>
+
+					<div class="grid-x grid-padding-x">
+						<div>
+							<button type="submit" class="button primary tiny">{{ button | default("Valider")}}</button>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+</div>
+<!--FIN DU COMPOSANT FORMULAIRE -->
