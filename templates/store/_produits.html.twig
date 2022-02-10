@@ -11,7 +11,9 @@
                             <h4>{{produit.enseigne.nom}}</h4>
                         </div>
                         <div class="produit_image">
-                            <img src="{{asset('assets/img/produits')}} {{produit.image}}" alt="{{produit.image}}">
+                           <img src="{{asset('assets/img/produits/')}}{{produit.image}}"
+            alt="photo {{produit.image}}"  
+            style="width:100%"/>
                         </div>
                         <div class="card-divider produit_nom">
                             <h4>: {{produit.nom}}</h4>
